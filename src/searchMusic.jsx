@@ -12,7 +12,11 @@ class SearchMusic extends React.Component {
   }
 
   searchGenius(event, title, artists) {
-      console.log('e', title, artists)
+      axios.get('/name/' + title + '/artist/' + artists[0].name).then(res => {
+          console.log(res.data);
+      }).catch(err => {
+          console.log(err);
+      })
       event.preventDefault()
   }
   handleChange(event) {
