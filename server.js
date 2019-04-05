@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 3000;
 const axios = require("axios");
 const SpotifyWebApi = require("spotify-web-api-node");
 const credentials = require("./config.js");
@@ -157,5 +156,5 @@ app.get("/id/:id", (req, res) => {
       res.send(err);
     });
 });
-app.listen(port, () => console.log("express"));
+app.listen(process.env.PORT || 3000, () => console.log("express"));
 
