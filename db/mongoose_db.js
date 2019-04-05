@@ -13,16 +13,25 @@ db.once('open', function() {
     console.log('mongoose')    
 });
 
-var itemSchema = new mongoose.Schema({
-    _id: Number,
-    id: Number,
+var songSchema = new mongoose.Schema({
+    title: String,
+    artist: String,
+    type: String,
+})
+
+var songModel = mongoose.model('Song', songSchema) 
+
+
+var movieSchema = new mongoose.Schema({
+    title: String,
     type: String,
     watson: []
 })
 
-var itemModel = mongoose.model('Item', itemSchema) 
+var movieModel = mongoose.model('Movie', movieSchema) 
 
-module.exports.db = {
-    model: itemModel,
+module.exports = {
+    songModel : songModel,
+    movieModel : movieModel, 
     connection :db
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import Items from "./items.jsx"
+import Songs from "./songs.jsx"
 
 class SearchMusic extends React.Component {
   constructor(props) {
@@ -8,12 +8,12 @@ class SearchMusic extends React.Component {
     this.state = {
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  searchGenius(event, title, artists) {
+  getMovie(event, title, artists, cb)  {
       axios.get('/name/' + title + '/artist/' + artists[0].name).then(res => {
-          console.log(res.data);
+        console.log('getmovie', res);
+        cb(res)
       }).catch(err => {
           console.log(err);
       })
@@ -24,7 +24,6 @@ class SearchMusic extends React.Component {
   }
   handleSubmit(event) {
       axios.get('/search/' + this.state.value).then((res) => {
-          console.log(res);
           this.setState({
               tracks : res.data.body.tracks.items
           })
@@ -36,13 +35,14 @@ class SearchMusic extends React.Component {
   render() {
     return (
       <div>
-          <form onSubmit = {this.handleSubmit}>
-              <label>Search:
-                  <input type="text" name="search" onChange = {this.handleChange}/>
+          <form  onSubmit = {this.handleSubmit}>
+              <label >
+                  <input className ="searchBar" type="text" name="search" onChange = {this.handleChange}/>
               </label>
               <input type ="submit" value ="Submit" />
           </form>
-        <Items items = {this.state.tracks} searchGenius = {this.searchGenius}/>
+        <Songs items = {this.state.tracks} setMovie = {this.props.setMovie} getMovie = {this.getMovie}/>
+
       </div>
     );
   }

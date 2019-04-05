@@ -1,5 +1,6 @@
-.config.js
-
+config.js
+./ignore
+./node_modules
 # Logs
 logs
 *.log

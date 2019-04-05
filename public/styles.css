@@ -1,0 +1,75 @@
+a {
+  text-decoration: none;
+}
+
+.musicList {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: seagreen;
+  width: 80%;
+  margin-left: 5%;
+}
+
+.musicList :visited {
+  color: seagreen;
+}
+
+.moviesList {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: teal;
+  margin-top: 3%;
+  width: 80%;
+  margin-left: 5%;
+}
+.movieMain {
+  display:flex;
+  flex-direction:row;
+}
+.movieText {
+  width:50%;
+}
+.moviesList :visited {
+  color: teal;
+}
+.movieSummary {
+  width :100%;
+}
+.movieThumb {
+  width:200px;
+}
+.movieThumb img {
+  max-width:100%;
+  max-height:100%;
+}
+.searchBar {
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-top: 1%;
+  width: 80%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  background-color: #3cbc8d;
+  color: white;
+  outline: none;
+}
+.searchBar:-webkit-autofill,
+.searchBar:-webkit-autofill:hover,
+.searchBar:-webkit-autofill:focus,
+.searchBar:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #3cbc8d inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+input[type="submit"] {
+  background-color: #3cbc8d;
+  color: white;
+  margin-left: 1%;
+}
+
+input[type="submit"]:hover {
+  background-color: darkgoldenrod;
+}
