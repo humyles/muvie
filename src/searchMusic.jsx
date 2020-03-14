@@ -37,7 +37,7 @@ class SearchMusic extends React.Component {
       <div>
           <form  onSubmit = {this.handleSubmit}>
               <label >
-                  <input className ="searchBar" type="text" name="search" onChange = {this.handleChange}/>
+                  <input className ="searchBar" type="text" name="search" placeholder = " Search for a song/artist" onChange = {this.handleChange}/>
               </label>
               <input type ="submit" value ="Submit" />
           </form>

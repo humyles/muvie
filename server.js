@@ -8,7 +8,7 @@ const cheerio = require("cheerio");
 var redis = require("redis");
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 
-client = redis.createClient('6379', '34.73.166.126');
+client = redis.createClient('6379', '34.73.165.103');
 client.on("error", function (err) {
     console.log(err);
 });

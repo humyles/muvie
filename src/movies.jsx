@@ -20,6 +20,10 @@ class Movies extends React.Component {
     if (this.props.movie !== undefined) {
       let item = this.props.movie.data;
       return (<div className = "movieMain" key = {item.id}>
+      <div className = "movieThumb">
+          <img src = {"https://image.tmdb.org/t/p/original/" + item.poster_path}>
+          </img>
+        </div>
       <div className = "movieText">
         <div className = "movieTitle">
           <a href = "">  title:{item.original_title}  </a>
@@ -27,10 +31,6 @@ class Movies extends React.Component {
         <div className = "movieSummary">summary:{item.overview}
         </div>
       </div>
-        <div className = "movieThumb">
-          <img src = {"https://image.tmdb.org/t/p/original/" + item.poster_path}>
-          </img>
-        </div>
         
       
       </div>)
