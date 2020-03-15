@@ -87,6 +87,7 @@ let getLyrics = (req, res, cb) => {
     })
     .then(x => {
       for (let i = 0; i < x.data.response.hits.length; i++) {
+        //fix this part probably recursively
         let artistName = x.data.response.hits[i].result.primary_artist.name;
         if (req.params.artist.includes(artistName)) {
           let page = x.data.response.hits[i].result.url;

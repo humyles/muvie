@@ -6,7 +6,8 @@ a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   color: seagreen;
-  width: 40%;
+  width: 35%;
+  margin-left : 5%;
   float:left;
 }
 
@@ -15,29 +16,37 @@ a {
 }
 
 .moviesList {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 14px;
-  color: teal;
   margin-top: 3%;
-  width: 40%;
-  margin-left: 5%;
+  width: 50%;
+  margin-left: 3%;
   float: left;
 }
 .movieMain {
   display:flex;
   flex-direction:row;
+  background-color : #3cbc8d;
+  background-color: #3cbc8d;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 25px;
+    border-color: #3cbc8d;
 }
 .movieText {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: white;
   width:50%;
+  margin : 1%;
 }
 .moviesList :visited {
-  color: teal;
+  color: whitesmoke;
 }
 .movieSummary {
   width :100%;
 }
+
 .movieThumb {
-  width:200px;
+  width : 50%
 }
 .movieThumb img {
   max-width:100%;
